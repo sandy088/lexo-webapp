@@ -5,10 +5,7 @@ export default async function Home() {
   const { userId } = await auth();
   if (!userId) {
     redirect("/sign-in");
+  } else {
+    redirect("/dashboard");
   }
-  return (
-    <div>
-      Hello
-    </div>
-  );
 }
